@@ -7,25 +7,16 @@
 </head>
 <body>
    <script>
-       n = parseInt(prompt("Enter a number"));
-       i = 0;
-       a = [];
-       count = 0;
-       while(n > 0){
-        r = n%10;
-        n = n/10;
-        a[i]=r;
-        i++;
-       }
-       for(j=i-1;j>=0;j--){
-        a[j]=a[i];
-        count++;
-       }
-       ans = a[0];
-       while(count!=0){
-        ans = ans*a[0];
-       }
-
+       n = parseInt(prompt("Enter a number"));       
+        re = n%10;
+        ans = Math.floor(n/10);
+        result = 1;
+        for(i=1;i<=re;i++){
+            result = result*ans;
+        }
+        document.write(result);
+        
+       
 
    </script> 
 </body>
