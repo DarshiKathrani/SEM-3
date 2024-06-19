@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter the length of array"));
+        a = [n];
+        for (let i = 0; i < n; i++) {
+             a[i] = parseInt(prompt("Enter the number at"+i));    
+        }
+        l=0;
+        for (let i = 0; i < a.length; i++) {
+            if(a[i]>l){
+                l = a[i];
+            }
+        }
+        document.write(l);
+    </script>
+</body>
+</html>

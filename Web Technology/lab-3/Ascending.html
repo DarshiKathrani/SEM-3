@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter size of array"));
+        a = [n];
+        for(i = 0;i<n;i++){
+            a[i] = parseInt(prompt("Enter element at"+" "+i));
+        }
+       for(i=0;i<n-1;i++){
+        s = i;
+        for(j=i+1;j<n;j++){
+            if(a[s]>a[i]){
+                s = j;
+            }
+        }
+        temp = a[s];
+        a[s] = a[i];
+        a[i] = temp;
+       }
+       for(i=0;i<a.length;i++){
+        document.write(a[i]+" ");
+       }
+        
+    </script>
+</body>
+</html>
